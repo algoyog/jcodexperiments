@@ -103,14 +103,5 @@ public class ThreadPerformanceBenchmark {
         long platformTime = measureExecutionTime(platformThreadPool, false);
 
         long virtualTime = measureExecutionTime(null, true);
-
-        System.out.println("******** Key Observations ********");
-        System.out.println("1. Platform Threads are limited by the number of CPU cores.");
-        System.out.println("2. Virtual Threads scale better with a higher number of tasks.");
-        System.out.println("3. Platform Threads create high OS overhead with context switching.");
-        System.out.println("4. Virtual Threads have significantly lower overhead.");
-        System.out.println("5. Virtual Threads complete tasks faster due to lightweight scheduling.");
-        System.out.println("6. Platform Threads struggle with a high number of concurrent tasks.");
-        System.out.println("**********************************");
     }
 }
